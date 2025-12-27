@@ -174,7 +174,6 @@ shareScheduleBtn.addEventListener('click', function() {
         navigator.share({
             title: `Jadwal Sholat ${currentSchedule.lokasi}`,
             text: scheduleText,
-            url: window.location.href
         }).catch(console.error);
     } else {
         copyToClipboard(scheduleText);
@@ -349,9 +348,9 @@ function generateScheduleText() {
 JADWAL SHOLAT ${schedule.lokasi.toUpperCase()}
 ${schedule.daerah} - ${schedule.jadwal.tanggal}
 
-┌─────────────────┬──────────┐
+┌─────────────────┬────┐
 │     WAKTU       │   JAM    │
-├─────────────────┼──────────┤
+├─────────────────┼────┤
 │ Imsak          │ ${schedule.jadwal.imsak.padStart(8, ' ')} │
 │ Subuh          │ ${schedule.jadwal.subuh.padStart(8, ' ')} │
 │ Terbit         │ ${schedule.jadwal.terbit.padStart(8, ' ')} │
@@ -360,11 +359,11 @@ ${schedule.daerah} - ${schedule.jadwal.tanggal}
 │ Ashar          │ ${schedule.jadwal.ashar.padStart(8, ' ')} │
 │ Maghrib        │ ${schedule.jadwal.maghrib.padStart(8, ' ')} │
 │ Isya           │ ${schedule.jadwal.isya.padStart(8, ' ')} │
-└─────────────────┴──────────┘
+└─────────────────┴────┘
 
-📅 Diperbarui: ${new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-🕋 Zakrenz-JadwalSholatKota
-🔗 https://zakrenz.github.io/jadwal-sholat
+</> Diperbarui: ${new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+</> Zakrenz-JadwalSholatKota
+</> https://zakrenz-jadwalsholat.vercel.app/
 `;
     
     return text;
