@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZakrenzClass • Schedule | TikTok: @zakrenzreal</title>
-    <meta name="description" content="Project Minimalis">
+    <title>Zakrenz-JadwalSholatKota | TikTok: @zakrenzreal</title>
+    <meta name="description" content="Zakrenz-JadwalSholatKota adalah aplikasi pencari jadwal sholat berdasarkan kota. Dapatkan jadwal sholat akurat untuk seluruh kota di Indonesia. Update setiap hari.">
     <link rel="icon" type="image/png" sizes="512x512" href="icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
@@ -14,238 +14,250 @@
     <div class="container">
         <nav class="navbar">
             <div class="nav-brand">
-                <span class="material-symbols-rounded nav-icon">school</span>
+                <span class="material-symbols-rounded nav-icon">mosque</span>
                 <div>
-                    <span class="nav-title">Zakrenz Schedule</span>
-                    <span class="nav-subtitle">クラススケジュール</span>
+                    <span class="nav-title">Zakrenz-JadwalSholatKota</span>
+                    <span class="nav-subtitle">都市別礼拝時刻スケジュール</span>
                 </div>
             </div>
-            <button class="today-btn">
-                <span class="material-symbols-rounded">today</span>
-                <span>Hari Ini</span>
-            </button>
+            <div class="nav-controls">
+                <button class="nav-btn" id="aboutBtn" title="About">
+                    <span class="material-symbols-rounded">loyalty</span>
+                </button>
+                <button class="nav-btn" id="donateBtn" title="Donate">
+                    <span class="material-symbols-rounded">fingerprint</span>
+                </button>
+            </div>
         </nav>
 
         <main class="main-content">
-            <div class="welcome-section slide-in-blur">
-                <div class="welcome-card">
-                    <div class="welcome-header">
-                        <span class="material-symbols-rounded welcome-icon">dashboard</span>
-                        <div class="welcome-text">
-                            <h1>Jadwal Kelas</h1>
-                            <p>Jadwal pelajaran SMA • 授業スケジュール</p>
+            <div class="hero-section slide-in-blur">
+                <div class="hero-card">
+                    <div class="hero-header">
+                        <span class="material-symbols-rounded hero-icon">schedule</span>
+                        <div class="hero-text">
+                            <h1>Jadwal Sholat Kota</h1>
+                            <p>Cari jadwal sholat berdasarkan kota di seluruh Indonesia</p>
                         </div>
                     </div>
-                    <div class="welcome-info">
-                        <div class="info-item">
-                            <span class="material-symbols-rounded">date_range</span>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="material-symbols-rounded">location_city</span>
                             <div>
-                                <small>Periode</small>
-                                <strong>Senin - Jumat</strong>
+                                <small>Cakupan Area</small>
+                                <strong>Seluruh Indonesia</strong>
                             </div>
                         </div>
-                        <div class="info-item">
-                            <span class="material-symbols-rounded">schedule</span>
+                        <div class="stat-item">
+                            <span class="material-symbols-rounded">update</span>
                             <div>
-                                <small>Waktu</small>
-                                <strong>07.00 - 15.55</strong>
+                                <small>Update Data</small>
+                                <strong>Setiap Hari</strong>
                             </div>
                         </div>
-                        <div class="info-item">
-                            <span class="material-symbols-rounded">book_5</span>
+                        <div class="stat-item">
+                            <span class="material-symbols-rounded">verified</span>
                             <div>
-                                <small>Total Mapel</small>
-                                <strong>24 Mata Pelajaran</strong>
+                                <small>Akurasi</small>
+                                <strong>Tinggi</strong>
                             </div>
                         </div>
-                        <div class="info-item">
+                        <div class="stat-item">
                             <span class="material-symbols-rounded">code</span>
                             <div>
-                                <small>Dibuat oleh</small>
-                                <strong>ZakrenzModder</strong>
+                                <small>Coded By</small>
+                                <strong>Zakrenz</strong>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="schedule-grid">
-                <div class="day-card slide-in-blur" data-day="senin">
-                    <div class="day-header">
-                        <div class="day-icon">
-                            <span class="material-symbols-rounded">star</span>
-                        </div>
-                        <div class="day-title">
-                            <h2>Senin / 月曜日</h2>
-                            <p>07.00 - 15.55</p>
-                        </div>
-                        <span class="day-badge">5 Mapel</span>
+            <div class="input-section slide-in-blur">
+                <div class="input-card">
+                    <div class="input-header">
+                        <span class="material-symbols-rounded">search</span>
+                        <h2>Cari Nama Kota</h2>
                     </div>
-                    <div class="day-divider"></div>
-                    <div class="subject-list">
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">science</span>
-                            <span>Fisika</span>
+                    <div class="input-body">
+                        <div class="search-section">
+                            <div class="search-input-wrapper">
+                                <span class="material-symbols-rounded input-icon">location_city</span>
+                                <input type="text" id="cityInput" class="search-input" placeholder="Masukkan nama kota anda">
+                                <button class="search-btn" id="searchBtn">
+                                    <span>Cari</span>
+                                </button>
+                            </div>
+                            <div class="search-examples">
+                                <p class="examples-title">Contoh kota:</p>
+                                <div class="examples-tags">
+                                    <span class="example-tag" data-city="Jakarta">Jakarta</span>
+                                    <span class="example-tag" data-city="Bandung">Bandung</span>
+                                    <span class="example-tag" data-city="Surabaya">Surabaya</span>
+                                    <span class="example-tag" data-city="Medan">Medan</span>
+                                    <span class="example-tag" data-city="Makassar">Makassar</span>
+                                    <span class="example-tag" data-city="Indramayu">Indramayu</span>
+                                    <span class="example-tag" data-city="Semarang">Semarang</span>
+                                    <span class="example-tag" data-city="Yogyakarta">Yogyakarta</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">translate</span>
-                            <span>Bahasa Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <div class="result-card slide-in-blur hidden" id="resultCard">
+                    <div class="result-header">
+                        <span class="material-symbols-rounded">calendar_clock</span>
+                        <h2>Jadwal Ditemukan!</h2>
+                        <div class="result-badge" id="resultDate">Hari Ini</div>
+                    </div>
+                    
+                    <div class="location-info">
+                        <div class="location-icon">
+                            <span class="material-symbols-rounded">place</span>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">book_2</span>
-                            <span>Al-Qur'an Hadist</span>
+                        <div class="location-details">
+                            <h3 id="cityName">Kota</h3>
+                            <p id="provinceName">Provinsi</p>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">computer</span>
-                            <span>Informatika</span>
+                    </div>
+                    
+                    <div class="prayer-grid" id="prayerGrid">
+                        <!-- Jadwal sholat akan diisi oleh JavaScript -->
+                    </div>
+
+                    <div class="additional-info">
+                        <div class="info-item">
+                            <span class="material-symbols-rounded">info</span>
+                            <div>
+                                <h4>Informasi</h4>
+                                <p>Jadwal ini menggunakan perhitungan waktu sholat berdasarkan posisi geografis kota. Waktu bisa berbeda ±2 menit tergantung lokasi tepat di dalam kota.</p>
+                            </div>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">language</span>
-                            <span>Bahasa Arab</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <div class="download-buttons">
+                            <button class="dl-btn primary" id="shareScheduleBtn">
+                                <span class="material-symbols-rounded">share</span>
+                                <span>Share Jadwal</span>
+                            </button>
+                            <button class="dl-btn" id="copyScheduleBtn">
+                                <span class="material-symbols-rounded">content_copy</span>
+                                <span>Salin Jadwal</span>
+                            </button>
+                            <button class="dl-btn" id="saveScheduleBtn">
+                                <span class="material-symbols-rounded">download</span>
+                                <span>Simpan</span>
+                            </button>
+                            <button class="dl-btn" id="refreshBtn">
+                                <span class="material-symbols-rounded">refresh</span>
+                                <span>Cari Lagi</span>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="day-card slide-in-blur" data-day="selasa">
-                    <div class="day-header">
-                        <div class="day-icon">
-                            <span class="material-symbols-rounded">star</span>
+                <div class="loading-card slide-in-blur hidden" id="loadingCard">
+                    <div class="loading-content">
+                        <div class="loading-icon">
+                            <span class="material-symbols-rounded">schedule</span>
                         </div>
-                        <div class="day-title">
-                            <h2>Selasa / 火曜日</h2>
-                            <p>07.00 - 15.55</p>
+                        <h3>Mencari Jadwal Sholat...</h3>
+                        <p>Sedang mengambil data jadwal sholat untuk kota yang diminta</p>
+                        <div class="loading-bar">
+                            <div class="loading-progress"></div>
                         </div>
-                        <span class="day-badge">5 Mapel</span>
-                    </div>
-                    <div class="day-divider"></div>
-                    <div class="subject-list">
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">calculate</span>
-                            <span>Matematika</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">sports</span>
-                            <span>Pendidikan Jasmani</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">mosque</span>
-                            <span>Fiqih</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">language</span>
-                            <span>Bahasa Arab</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">history</span>
-                            <span>SKI</span>
+                        <div class="loading-stats">
+                            <span>Memproses...</span>
+                            <span id="loadingPercent">0%</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="day-card slide-in-blur" data-day="rabu">
-                    <div class="day-header">
-                        <div class="day-icon">
-                            <span class="material-symbols-rounded">star</span>
+                <div class="error-card slide-in-blur hidden" id="errorCard">
+                    <div class="error-content">
+                        <div class="error-icon">
+                            <span class="material-symbols-rounded">error</span>
                         </div>
-                        <div class="day-title">
-                            <h2>Rabu / 水曜日</h2>
-                            <p>07.00 - 15.55</p>
-                        </div>
-                        <span class="day-badge">4 Mapel</span>
+                        <h3>Kota Tidak Ditemukan :(</h3>
+                        <p id="errorMessage">Kota yang Anda cari tidak ditemukan. Coba cari dengan nama kota yang lain.</p>
+                        <button class="retry-btn" id="retryBtn">
+                            <span class="material-symbols-rounded">refresh</span>
+                            <span>Coba Lagi</span>
+                        </button>
                     </div>
-                    <div class="day-divider"></div>
-                    <div class="subject-list">
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">language</span>
-                            <span>Bahasa Inggris</span>
+                </div>
+            </div>
+
+            <div class="features-section slide-in-blur">
+                <div class="features-card">
+                    <div class="features-header">
+                        <span class="material-symbols-rounded">star</span>
+                        <h2>Fitur Unggulan</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="material-symbols-rounded">location_city</span>
+                            <div>
+                                <h3>Seluruh Kota</h3>
+                                <p>Jadwal sholat untuk semua kota di Indonesia</p>
+                            </div>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">science</span>
-                            <span>Kimia</span>
+                        <div class="feature-item">
+                            <span class="material-symbols-rounded">update</span>
+                            <div>
+                                <h3>Update Harian</h3>
+                                <p>Data diperbarui setiap hari secara otomatis</p>
+                            </div>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">self_improvement</span>
-                            <span>Aqidah Akhlak</span>
+                        <div class="feature-item">
+                            <span class="material-symbols-rounded">schedule</span>
+                            <div>
+                                <h3>Akurat</h3>
+                                <p>Perhitungan waktu sholat yang presisi</p>
+                            </div>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">diversity_3</span>
-                            <span>P5</span>
+                        <div class="feature-item">
+                            <span class="material-symbols-rounded">celebration</span>
+                            <div>
+                                <h3>Gratis</h3>
+                                <p>Tanpa biaya, tanpa iklan</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="day-card slide-in-blur" data-day="kamis">
-                    <div class="day-header">
-                        <div class="day-icon">
-                            <span class="material-symbols-rounded">star</span>
-                        </div>
-                        <div class="day-title">
-                            <h2>Kamis / 木曜日</h2>
-                            <p>07.00 - 15.55</p>
-                        </div>
-                        <span class="day-badge">5 Mapel</span>
+            <div class="instructions-section slide-in-blur">
+                <div class="instructions-card">
+                    <div class="instructions-header">
+                        <span class="material-symbols-rounded">help</span>
+                        <h2>Cara Penggunaan</h2>
                     </div>
-                    <div class="day-divider"></div>
-                    <div class="subject-list">
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">balance</span>
-                            <span>PPKN</span>
+                    <div class="instructions-steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Masukkan Nama Kota</h3>
+                                <p>Ketik nama kota di kotak pencarian, misalnya "Indramayu", "Jakarta", atau "Bandung"</p>
+                            </div>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">biotech</span>
-                            <span>Biologi</span>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Klik Cari Jadwal</h3>
+                                <p>Tekan tombol "Cari Jadwal" atau tekan Enter untuk memulai pencarian</p>
+                            </div>
                         </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">history_edu</span>
-                            <span>Sejarah</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">translate</span>
-                            <span>Bahasa Indonesia</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">trending_up</span>
-                            <span>Ekonomi</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="day-card slide-in-blur" data-day="jumat">
-                    <div class="day-header">
-                        <div class="day-icon">
-                            <span class="material-symbols-rounded">star</span>
-                        </div>
-                        <div class="day-title">
-                            <h2>Jumat / 金曜日</h2>
-                            <p>07.00 - 15.25</p>
-                        </div>
-                        <span class="day-badge">6 Mapel</span>
-                    </div>
-                    <div class="day-divider"></div>
-                    <div class="subject-list">
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">routine</span>
-                            <span>Pembiasaan</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">palette</span>
-                            <span>Seni Budaya</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">groups</span>
-                            <span>Sosiologi</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">public</span>
-                            <span>Geografi</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">language</span>
-                            <span>Bahasa Inggris</span>
-                        </div>
-                        <div class="subject-item">
-                            <span class="material-symbols-rounded">book_2</span>
-                            <span>BTQ dan Tahfidz</span>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Lihat Hasil</h3>
+                                <p>Tunggu sebentar dan lihat jadwal sholat untuk kota yang Anda cari</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -254,7 +266,11 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <span>© Zakrenz-Schedule • 授業スケジュール</span>
+                <span>© Zakrenz JadwalSholatKota • [ 都市別礼拝時刻 ]</span>
+                <div class="footer-links">
+                    <button class="footer-link" id="footerDonate">Donate</button>
+                    <button class="footer-link" id="footerAbout">About</button>
+                </div>
             </div>
         </footer>
     </div>
@@ -262,15 +278,94 @@
     <div class="welcome-dialog" id="welcomeDialog">
         <div class="dialog-content">
             <div class="dialog-header">
-                <span class="material-symbols-rounded dialog-icon">school</span>
-                <h2>Zakrenz Schedule</h2>
+                <span class="material-symbols-rounded dialog-icon">mosque</span>
+                <h2>Zakrenz JadwalSholatKota</h2>
             </div>
             <div class="dialog-body">
-                <p>Selamat datang di jadwal pelajaran!</p>
-                <p>Lihat jadwal pelajaran harian dalam tampilan minimalis.</p>
+                <p>Selamat datang di Jadwal Sholat Kota!</p>
+                <p>Cari jadwal sholat berdasarkan kota di seluruh Indonesia. Data akurat, update setiap hari, dan gratis untuk digunakan.</p>
             </div>
             <div class="dialog-footer">
                 <button id="welcomeClose" class="dialog-btn">Mulai</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-dialog hidden" id="aboutDialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <span class="material-symbols-rounded dialog-icon">info</span>
+                <h2>Tentang</h2>
+                <button class="close-btn" id="closeAbout">
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </div>
+            <div class="dialog-body">
+                <div class="about-section">
+                    <h3>Zakrenz JadwalSholatKota</h3>
+                    <p>Aplikasi untuk mencari jadwal sholat berdasarkan kota di seluruh Indonesia. Cocok untuk muslim yang sedang bepergian atau pindah kota.</p>
+                </div>
+                <div class="about-section">
+                    <h3>Cara Menggunakan:</h3>
+                    <ol>
+                        <li>Masukkan nama kota di kotak pencarian</li>
+                        <li>Klik tombol "Cari Jadwal" atau tekan Enter</li>
+                        <li>Tunggu proses pencarian selesai</li>
+                        <li>Lihat jadwal sholat untuk kota tersebut</li>
+                        <li>Share atau simpan jadwal jika diperlukan</li>
+                    </ol>
+                </div>
+                <div class="about-section">
+                    <h3>Sumber Data:</h3>
+                    <ul>
+                        <li>API: Ryzumi API Jadwal Sholat</li>
+                        <li>Update: Setiap hari otomatis</li>
+                        <li>Cakupan: Seluruh kota di Indonesia</li>
+                        <li>Akurasi: Perhitungan astronomis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="donate-dialog hidden" id="donateDialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <span class="material-symbols-rounded dialog-icon">person</span>
+                <h2>Support Developer</h2>
+                <button class="close-btn" id="closeDonate">
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </div>
+            <div class="dialog-body">
+                <div class="donate-section">
+                    <h3>Dukung Pengembangan</h3>
+                    <p>Bantu saya untuk terus mengembangkan aplikasi Islami ini agar tetap gratis dan bisa digunakan oleh semua orang.</p>
+                </div>
+                <div class="donate-section">
+                    <h3>Donasi via:</h3>
+                    <div class="donate-methods">
+                        <div class="donate-method">
+                            <div class="donate-icon">
+                                <span class="material-symbols-rounded">payments</span>
+                            </div>
+                            <div class="donate-info">
+                                <h4>E-Wallet</h4>
+                                <p>DANA: 08774289801</p>
+                                <p>OVO: 08774289801</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="donate-section">
+                    <h3>Terima Kasih!</h3>
+                    <p>Setiap donasi sangat berarti untuk pengembangan aplikasi ini. Semoga menjadi amal jariyah.</p>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-btn" onclick="window.open('https://www.tiktok.com/@zakrenzreal', '_blank')">
+                    Dukungan
+                </button>
             </div>
         </div>
     </div>
